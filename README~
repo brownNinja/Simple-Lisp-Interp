@@ -1,0 +1,40 @@
+Creator: GUHAN VENGUSWAMY
+
+README:
+
+HOW TO RUN AND COMPILE THE CODE:
+There is no Makefile for this rather this is a list of operations to compile and run the code.
+
+1. Compile the Tokenizer with the command.
+	javac Tokenizer.java
+2. Compile the Binary Tree Class with the command
+        javac BinaryTNode.java
+3. Compile the interpreter with the command
+        javac Interpreter.java
+4.Run the code with the command:
+        java Interpreter < "input.in" > "output.out"
+
+    with the input and output files being added in as needed
+
+
+DESIGN:
+This project was done in three parts. The tokenizer was first built then the binary tree data structure then the parser and executor were combined to form the interpreter. All three of these classes work together to form the overall interpreter
+
+Tokenizer: This class takes in the string given and splits it into easy to manage tokens for the interpreter. This also allows for some of the error checking such as unknown characters.
+
+BinaryTNode: This Class is a node for a binary tree and is used to represent the abstract parse tree
+
+Interpreter: This class contains both the parser and the executor. It is split up in the class itself in order to easily differentiate them.
+	Parser: This parser uses the CFG given in the project handout and constructs the abstract parse tree with the help of the BinaryTNode class
+	Executor: The Executor does most of the error checking as well as the actual execution itself. It splits up the Primitives into separate evaluation functions and uses a switch board to allow for a recursive descent structure.
+
+DESIGN TWEAKS:
+-When calling a DEFUN function the interpreter expects the values of the parameters to be within parenthesis.
+	ex: (SILLY ( 5 4) ) is allowed, but (SILLY 5 4) is not allowed.
+
+KNOWN PROBLEMS:
+-The DEFUN function for some reason has some trouble with the parameters from time to time, but I cannot determine where the problem is,
+
+-The output for the lists is slightly off in that it does not normally reduce the dot notation into the list notation.
+
+

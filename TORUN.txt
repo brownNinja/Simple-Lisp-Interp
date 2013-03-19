@@ -1,0 +1,14 @@
+TO RUN:
+HOW TO RUN AND COMPILE THE CODE:
+There is no Makefile for this rather this is a list of operations to compile and run the code.
+
+1. Compile the Tokenizer with the command.
+	javac Tokenizer.java
+2. Compile the Binary Tree Class with the command
+        javac BinaryTNode.java
+3. Compile the interpreter with the command
+        javac Interpreter.java
+4.Run the code with the command:
+        java Interpreter < test1.in
+
+the test file is given and can be altered as necessary
